@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style for the range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px; /* Track width */
+  height: 7px; /* Track height */
+  background: rgb(62, 62, 239); /* Default background color */
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style for the thumb */
+input[type="range"]::-webkit-slider-thumb {
+  width: 6px;
+  height: 30px;
+  background: rgb(93, 93, 97); /* Default thumb color */
+  border-radius: 10px;
+  border-color: rgb(84, 84, 84);
+  border-width: 4px;
+  cursor: pointer;
+  transform: rotate(180deg); /* Rotate the thumb to make it vertical */
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px; /* Adjust to center the thumb vertically */
+  position: relative;
+}
+
+/* Track color when moving the thumb */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 7px;
+  background: linear-gradient(
+    to right,
+    rgb(62, 62, 239) 0%,
+    rgb(62, 62, 239) 50%,
+    #ddd 50%,
+    #ddd 100%
+  );
+  border-radius: 5px;
+}
+
+/* Firefox styles */
+input[type="range"]::-moz-range-track {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #4caf50 0%,
+    #4caf50 50%,
+    #ddd 50%,
+    #ddd 100%
+  );
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 40px;
+  background: #4caf50;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: rotate(90deg); /* Rotate the thumb */
+}
+
+/* For Edge and other browsers */
+input[type="range"]::-ms-track {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #4caf50 0%,
+    #4caf50 50%,
+    #ddd 50%,
+    #ddd 100%
+  );
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 40px;
+  background: #4caf50;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: rotate(90deg); /* Rotate the thumb */
+}
